@@ -1,0 +1,182 @@
+
+
+body{	
+	margin: 0px;
+}
+
+
+#div-nav{
+	height: 70px;
+	background-color: black;
+}
+
+
+.nav{
+	text-align: right;
+}
+
+
+
+.nav ul{
+	list-style-type: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+  	padding: 0px;
+  	overflow: hidden;
+}
+
+
+.nav li {
+  	display: inline-block;
+ 	/* border-right: 1px solid black; */
+ 	margin-bottom: 0px;
+}
+
+
+.nav li a {
+  	display: block;
+  	margin-top: 0px;
+  	margin-bottom: 0px;
+  	padding: 20px;
+  	text-decoration: none;
+  	font-size: 17px;
+  	color: #C48888;
+}
+
+
+.nav li a:hover {
+  	color: white;
+}
+
+
+
+#top{
+	display: flex;
+	height: 950px;
+	
+}
+
+
+#top #picture-left{
+	width: 7%;
+}
+
+
+#top #mypicture{
+	width: 25%;
+}
+
+
+#top #mypicture #picture-top{
+	height: 20%;
+}
+
+
+#top #mypicture #picture img{
+	height: auto;
+	max-width: 100%;
+    width: 350px;
+    border-radius:50%;
+}
+
+
+#picture-right{
+	width: 3%;
+}
+
+
+#top #text{
+	width: 65%;
+}
+
+
+#top #text #text-top{
+	height: 5%;
+}
+
+
+#middle{
+	height: 400px;
+	display: flex;
+}
+
+
+#middle #skill-left{
+	width: 15%;
+}
+
+
+#middle #skill{
+	width: 35%;
+}
+
+
+#skill-text{
+	background-color: ;
+	width: 50%;
+}
+
+
+#calculus-1{
+	background-color: #EDEDED;
+	width: 70%;
+}
+
+
+#calculus-2{
+	background-color: #D6D6AD;
+	width: 60%;
+}
+
+
+#linear-algebra-1{
+	background-color: #EDEDED;
+	width: 70%;
+}
+
+
+#linear-algebra-2{
+	background-color: #D6D6AD;
+	width: 10%;
+}
+
+
+#html-css-1{
+	background-color: #EDEDED;
+	width: 70%;
+}
+
+
+#html-css-2{
+	background-color: #D6D6AD;
+	width: 30%;
+}
+
+
+#python-1{
+	background-color: #EDEDED;
+	width: 70%;
+}
+
+
+#python-2{
+	background-color: #D6D6AD;
+	width: 10%;
+}
+
+
+#bottom{
+	background-color: black;
+	height: 100px;
+}
+
+
+#bottom p{
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 10px;
+}
+
+
+
+

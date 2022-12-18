@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Homework5">
+	<title>聯絡我</title>	
+	<link rel="stylesheet" type="text/css" href="Contact.css">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="picture3.jpg">
+</head>
+	<!-- 一開始即執行javascript的 init() function -->
+<body onload="init()">
+	<div id="div-nav">
+		<nav class="nav">
+			<ul>
+        		<li style="float: left;">
+					<a  style="font-size:26px;" href="file:///C:/Users/%E4%BA%91%E7%83%9F/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF%E8%88%87%E5%AF%A6%E5%8B%99/Homework5/Homework5.html">
+        				<B>INDEFINITE</B>
+        			</a>
+				</li>
+
+    			<li>
+					<a href="file:///C:/Users/%E4%BA%91%E7%83%9F/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF%E8%88%87%E5%AF%A6%E5%8B%99/Homework5/About.html">About</a>
+				</li>
+
+				<li>
+					<a href="file:///C:/Users/%E4%BA%91%E7%83%9F/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF%E8%88%87%E5%AF%A6%E5%8B%99/Homework5/Sigma.html">Σ</a>
+				</li>
+				<li>
+					<a href="file:///C:/Users/%E4%BA%91%E7%83%9F/Desktop/%E5%A4%A7%E4%BA%8C%E4%B8%8A/%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF%E8%88%87%E5%AF%A6%E5%8B%99/Homework5/Contact.html">Contact</a>
+				</li>
+ 			</ul>
+ 		</nav>
+	</div>
+
+
+	
+
+
+<div id="contact">
+	<form   enctype="text/plain" accept-charset="utf-8">
+    <!-- 寄件者姓名    -->
+    <input id="nameText" type="text" name="Name"  value size="60" placeholder="姓名(name)" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
+    <br>
+    <!-- 寄件者email -->
+    <input id="emailText" type="email" name="Email"  value size="60" placeholder="Email" required>
+    <br>
+    <!-- 寄件者電話 -->
+    <input id="telText" type="tel" name="Phone"  value size="60" aria-invalid="false" placeholder="電話(phone)" required>
+    <br>
+    <!-- 郵件主旨 -->
+    <input  id="subText" type="text" name="Subject"  value size="80" aria-invalid="false" placeholder="主旨(subject)" required>
+    <br>       
+    <!-- 郵件內容 -->
+    <textarea id="bodyText" name="your-message" cols="90" rows="10"  aria-required="true" aria-invalid="false" placeholder="您的訊息(Your Message)" required></textarea>
+    <br>
+    <!-- 傳送按鈕 -->
+    <div>
+        <input type="button" value="送出訊息" onclick="submitHandler();">
+        <a id="mailTo"></a>
+    </div>
+	</form>
+</div>
+
+ <script>
+//宣告預設表單內容為空
+    var initSubject='',initBody='';
+ 
+    //按下傳送按鈕後執行
+    function submitHandler(){
+        var to = "11004127@gm.nttu.edu.tw";//信箱
+        var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
+        var email = emailText.value;
+        var tel = telText.value;
+        var subject = subText.value;
+//把user填的資料都塞到 mail body 中
+        var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
+            body += "From："+nameText.value+'%0A';
+            body += "Email："+emailText.value+'%0A';
+            body += "Tel："+telText.value;
+//傳送的主要程式碼
+        mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+        mailTo.click();
+    }
+//在body onload
+    function init(){
+        subText.value=initSubject;
+        toText.value=initTo;
+        bodyText.value=initBody;
+    }
+
+
+</script>
+
+</body>
+</html>
